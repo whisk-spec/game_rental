@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Your Wishlist{% endblock %}
+
+{% block content %}
+<main class="wishlist-container">
+    <h1>Your Wishlist</h1>
+
+    <!-- Wishlist Items -->
+    {% if wishlist_items %}
+        <ul class="wishlist">
+            {% for item in wishlist_items %}
+                <li class="wishlist-item">
+                    <h2>{{ item.game.title }}</h2>
+                    <p><strong>Developer:</strong> {{ item.game.developer }}</p>
+                    <p><strong>Genre:</strong> {{ item.game.genre }}</p>
+                    <p><strong>Description:</strong> {{ item.game.description }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Your wishlist is empty.</p>
+    {% endif %}
+</main>
+{% endblock %}
+

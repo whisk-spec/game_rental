@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Rent-A-Game HQ{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Rent-A-Game HQ</h1>
+        <p>Discover the latest and greatest games. Rent and play your favorite titles without breaking the bank!</p>
+    </div>
+</section>
+
+<!-- New Releases Section -->
+<section class="new-releases">
+    <h2>New Releases</h2>
+    <div class="new-releases-grid">
+        <div class="game-card">
+            <img src="{{ url_for('static', filename='images/game1.jpg') }}" alt="The Legend of Zelda: Tears of the Kingdom">
+            <h3>The Legend of Zelda: Tears of the Kingdom</h3>
+            <p>Explore the world of Hyrule in this action-packed adventure.</p>
+        </div>
+        <div class="game-card">
+            <img src="{{ url_for('static', filename='images/game2.jpg') }}" alt="Starfield">
+            <h3>Starfield</h3>
+            <p>Embark on an epic space exploration journey from Bethesda.</p>
+        </div>
+        <div class="game-card">
+            <img src="{{ url_for('static', filename='images/game3.jpg') }}" alt="Spider-Man 2">
+            <h3>Spider-Man 2</h3>
+            <p>Join Peter Parker and Miles Morales in an epic superhero adventure.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
